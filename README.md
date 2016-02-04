@@ -14,10 +14,10 @@ not conflict with other ChiliPeppr widgets.
 | ID                    | com-chilipeppr-elem-pubsubviewer |
 | Name                  | Element / Pubsub Viewer |
 | Description           | This widget can be used to attach a set of menu items to a parent widget’s upper right corner menu to show the backing Github URL, a forking link, test links, and the inline pubsub viewer which lets you see what signals this widget publishes and subscribes to as well as documentation on the methods/properties inside the parent widget. |
-| chilipeppr.load() URL | http://raw.githubusercontent.com/raykholo/widget-pubsubviewer/master/auto-generated-widget.html |
-| Edit URL              | http://ide.c9.io/raykholo/widget-pubsubviewer |
-| Github URL            | http://github.com/raykholo/widget-pubsubviewer |
-| Test URL              | https://preview.c9users.io/raykholo/widget-pubsubviewer/widget.html |
+| chilipeppr.load() URL | http://raw.githubusercontent.com/chilipeppr/widget-pubsubviewer/master/auto-generated-widget.html |
+| Edit URL              | http://ide.c9.io/chilipeppr/widget-pubsubviewer |
+| Github URL            | http://github.com/chilipeppr/widget-pubsubviewer |
+| Test URL              | https://preview.c9users.io/chilipeppr/widget-pubsubviewer/widget.html |
 
 ## Example Code for chilipeppr.load() Statement
 
@@ -33,7 +33,7 @@ $("body").append('<' + 'div id="myDivElemPubsubviewer"><' + '/div>');
 
 chilipeppr.load(
   "#myDivElemPubsubviewer",
-  "http://raw.githubusercontent.com/raykholo/widget-pubsubviewer/master/auto-generated-widget.html",
+  "http://raw.githubusercontent.com/chilipeppr/widget-pubsubviewer/master/auto-generated-widget.html",
   function() {
     // Callback after widget loaded into #myDivElemPubsubviewer
     // Now use require.js to get reference to instantiated widget
@@ -132,7 +132,7 @@ The table below shows, in order, the methods and properties inside the widget/el
           </tr>
       </thead>
       <tbody>
-      <tr valign="top"><td>id</td><td>string</td><td>"com-chilipeppr-elem-pubsubviewer"</td></tr><tr valign="top"><td>url</td><td>string</td><td>"http://raw.githubusercontent.com/raykholo/widget-pubsubviewer/master/auto-generated-widget.html"</td></tr><tr valign="top"><td>fiddleurl</td><td>string</td><td>"http://ide.c9.io/raykholo/widget-pubsubviewer"</td></tr><tr valign="top"><td>githuburl</td><td>string</td><td>"http://github.com/raykholo/widget-pubsubviewer"</td></tr><tr valign="top"><td>testurl</td><td>string</td><td>"http://widget-pubsubviewer-raykholo.c9users.io/widget.html"</td></tr><tr valign="top"><td>name</td><td>string</td><td>"Element / Pubsub Viewer"</td></tr><tr valign="top"><td>desc</td><td>string</td><td>"This widget can be used to attach a set of menu items to a parent widget’s upper right corner menu to show the backing Github URL, a forking link, test links, and the inline pubsub viewer which lets you see what signals this widget publishes and subscribes to as well as documentation on the methods/properties inside the parent widget."</td></tr><tr valign="top"><td>isInitted</td><td>boolean</td><td></td></tr><tr valign="top"><td>init</td><td>function</td><td>function () </td></tr><tr valign="top"><td>cpobject</td><td>object</td><td></td></tr><tr valign="top"><td>pubsubClick</td><td>function</td><td>function (evt) </td></tr><tr valign="top"><td>show</td><td>function</td><td>function (cpobject) </td></tr><tr valign="top"><td>onShow</td><td>function</td><td>function () </td></tr><tr valign="top"><td>appendKeyVal</td><td>function</td><td>function (data, id) </td></tr><tr valign="top"><td>attachTo</td><td>function</td><td>function (dropdownMenuEl, cpobject, altTitle) </td></tr>
+      <tr valign="top"><td>id</td><td>string</td><td>"com-chilipeppr-elem-pubsubviewer"</td></tr><tr valign="top"><td>url</td><td>string</td><td>"http://raw.githubusercontent.com/chilipeppr/widget-pubsubviewer/master/auto-generated-widget.html"</td></tr><tr valign="top"><td>fiddleurl</td><td>string</td><td>"http://ide.c9.io/chilipeppr/widget-pubsubviewer"</td></tr><tr valign="top"><td>githuburl</td><td>string</td><td>"http://github.com/chilipeppr/widget-pubsubviewer"</td></tr><tr valign="top"><td>testurl</td><td>string</td><td>"http://widget-pubsubviewer-chilipeppr.c9users.io/widget.html"</td></tr><tr valign="top"><td>name</td><td>string</td><td>"Element / Pubsub Viewer"</td></tr><tr valign="top"><td>desc</td><td>string</td><td>"This widget can be used to attach a set of menu items to a parent widget’s upper right corner menu to show the backing Github URL, a forking link, test links, and the inline pubsub viewer which lets you see what signals this widget publishes and subscribes to as well as documentation on the methods/properties inside the parent widget."</td></tr><tr valign="top"><td>isInitted</td><td>boolean</td><td></td></tr><tr valign="top"><td>init</td><td>function</td><td>function () </td></tr><tr valign="top"><td>cpobject</td><td>object</td><td></td></tr><tr valign="top"><td>pubsubClick</td><td>function</td><td>function (evt) </td></tr><tr valign="top"><td>show</td><td>function</td><td>function (cpobject) </td></tr><tr valign="top"><td>onShow</td><td>function</td><td>function () </td></tr><tr valign="top"><td>appendKeyVal</td><td>function</td><td>function (data, id) </td></tr><tr valign="top"><td>attachTo</td><td>function</td><td>function (dropdownMenuEl, cpobject, altTitle) </td></tr>
       </tbody>
   </table>
 
