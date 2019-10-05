@@ -3,34 +3,53 @@ cprequire_test(["inline:com-chilipeppr-elem-pubsubviewer"], function(psv) {
     console.log("test running of " + psv.id);
     //psv.init();
 
+    $('body').css('padding', '20px');
+    $('title').html(psv.name);
+
     var divs = $('<div id="com-chilipeppr-elem-pubsubviewer-object" class=""></div>' +
         '<div id="com-chilipeppr-elem-pubsubviewer-object2" class=""></div>');
     $('body').append(divs);
 
-    chilipeppr.load("#com-chilipeppr-elem-pubsubviewer-object",
-        "http://fiddle.jshell.net/chilipeppr/XxEBZ/show/light/",
-        function() {
-            require(["inline:com-chilipeppr-widget-tinyg", 'inline:com-chilipeppr-elem-pubsubviewer'], function(tinyg, pubsubviewer) {
-                console.log("inside require of tinyg");
-                console.log("tinyg obj:", tinyg);
-                tinyg.init();
+    // chilipeppr.load("#com-chilipeppr-elem-pubsubviewer-object",
+    //     "http://fiddle.jshell.net/chilipeppr/XxEBZ/show/light/",
+    //     function() {
+    //         require(["inline:com-chilipeppr-widget-tinyg", 'inline:com-chilipeppr-elem-pubsubviewer'], function(tinyg, pubsubviewer) {
+    //             console.log("inside require of tinyg");
+    //             console.log("tinyg obj:", tinyg);
+    //             tinyg.init();
 
-                //psv.show(cpobj);
-                //pubsubviewer.attachTo($('#com-chilipeppr-elem-pubsubviewer-object .panel-heading .dropdown-menu'), tinyg);
-            });
-        });
-
-    chilipeppr.load("#com-chilipeppr-elem-pubsubviewer-object2",
-        "http://fiddle.jshell.net/chilipeppr/gh45j/show/light/",
+    //             //psv.show(cpobj);
+    //             //pubsubviewer.attachTo($('#com-chilipeppr-elem-pubsubviewer-object .panel-heading .dropdown-menu'), tinyg);
+    //         });
+    //     });
+    chilipeppr.load(
+        "#com-chilipeppr-elem-pubsubviewer-object",
+        "http://raw.githubusercontent.com/chilipeppr/widget-gcodelist/master/auto-generated-widget.html",
         function() {
-            require(["inline:com-chilipeppr-widget-xyz"], function(xyz) {
-                console.log("inside require of xyz");
-                console.log("xyz obj:", xyz);
-                xyz.init();
-                //psv.show(cpobj);
-                //psv.attachTo($('#com-chilipeppr-elem-pubsubviewer-object2 .panel-heading .dropdown-menu'), xyz);
-            });
-        });
+          // Callback after widget loaded into #myDivWidgetGcode
+          // Now use require.js to get reference to instantiated widget
+          cprequire(
+            ["inline:com-chilipeppr-widget-gcode"], // the id you gave your widget
+            function(myObjWidgetGcode) {
+              // Callback that is passed reference to the newly loaded widget
+              console.log("Widget / Gcode v8 just got loaded.", myObjWidgetGcode);
+              myObjWidgetGcode.init();
+            }
+          );
+        }
+      );
+
+    // chilipeppr.load("#com-chilipeppr-elem-pubsubviewer-object2",
+    //     "http://fiddle.jshell.net/chilipeppr/gh45j/show/light/",
+    //     function() {
+    //         require(["inline:com-chilipeppr-widget-xyz"], function(xyz) {
+    //             console.log("inside require of xyz");
+    //             console.log("xyz obj:", xyz);
+    //             xyz.init();
+    //             //psv.show(cpobj);
+    //             //psv.attachTo($('#com-chilipeppr-elem-pubsubviewer-object2 .panel-heading .dropdown-menu'), xyz);
+    //         });
+    //     });
 
 } /*end_test*/ );
 
@@ -156,9 +175,9 @@ cpdefine("inline:com-chilipeppr-elem-pubsubviewer", ["chilipeppr_ready"], functi
                 var c9 = "";
                 if (o.fiddleurl.match(/c9\.io/i)) c9 = " in Cloud9";
                 el.append('<li><a href="' + o.url + '" target="_blank" class="fork">URL for chilipeppr.load()</a></li>');
-                el.append('<li><a href="' + o.fiddleurl + '" target="_blank" class="fork">Edit ' + title + c9 + '</a></li>');
-                el.append('<li><a href="' + o.githuburl + '" target="_blank" class="fork">Fork ' + title + ' in Github</a></li>');
-                el.append('<li><a href="' + o.testurl + '" target="_blank" class="fork">View ' + title + ' Standalone for Testing</a></li>');
+                // el.append('<li><a href="' + o.fiddleurl + '" target="_blank" class="fork">Edit ' + title + c9 + '</a></li>');
+                el.append('<li><a href="' + o.githuburl + '" target="_blank" class="fork">View ' + title + ' in Github</a></li>');
+                // el.append('<li><a href="' + o.testurl + '" target="_blank" class="fork">View ' + title + ' Standalone for Testing</a></li>');
 
             }
             else {
